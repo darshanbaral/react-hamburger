@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Hamburger from "./components/hamburger";
 
 import "./styles.css";
 
 function App() {
+  const [isHamburger, setIsHamburger] = useState("true");
+  const myFunction = (isHamburger = true) => {
+    setIsHamburger(isHamburger);
+  };
   return (
     <div className="App">
-      <h1>Hamburger Menu</h1>
+      <h1>{isHamburger ? "Hamburger" : "Cross"}</h1>
       <h2>
         By <a href="https://www.darshanbaral.com/">Darshan</a>.
       </h2>
