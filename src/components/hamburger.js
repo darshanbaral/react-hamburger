@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
 function Hamburger(props) {
+  const colors = props.colors
+    ? props.colors
+    : { hamburger: "black", cross: "black" };
   const [isHamburger, setIsHamburger] = useState(true);
 
   const handleClick = () => {
@@ -32,7 +35,7 @@ function Hamburger(props) {
           margin: "0",
           border: `solid ${lineThickness}px`,
           borderRadius: "calc(5px + 5%)",
-          borderColor: isHamburger ? props.colors[0] : props.colors[1],
+          borderColor: isHamburger ? colors.hamburger : colors.cross,
           padding: "0",
           width: "100%",
           transform: isHamburger
@@ -47,7 +50,7 @@ function Hamburger(props) {
           margin: "0",
           border: `solid ${lineThickness}px`,
           borderRadius: "calc(5px + 5%)",
-          borderColor: isHamburger ? props.colors[0] : props.colors[1],
+          borderColor: isHamburger ? colors.hamburger : colors.cross,
           padding: "0",
           width: isHamburger ? "100%" : "0",
           opacity: isHamburger ? "100%" : "0",
@@ -59,7 +62,7 @@ function Hamburger(props) {
           margin: "0",
           border: `solid ${lineThickness}px`,
           borderRadius: "calc(5px + 5%)",
-          borderColor: isHamburger ? props.colors[0] : props.colors[1],
+          borderColor: isHamburger ? colors.hamburger : colors.cross,
           padding: "0",
           width: "100%",
           transform: isHamburger

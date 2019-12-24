@@ -19,7 +19,7 @@ function App() {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Hamburger
           size={75}
-          colors={["black", "red"]}
+          colors={{ hamburger: "black", cross: "red" }}
           delay="0.5s"
           alsoRun={myFunction}
         />
