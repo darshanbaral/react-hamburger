@@ -13,14 +13,15 @@ function Hamburger(props) {
     setIsHamburger(!isHamburger);
   };
 
-  const lineThickness = props.size / 12;
-  const shiftLines = props.size / 2 - lineThickness;
+  const size = props.size ? props.size : 25;
+  const lineThickness = size / 12;
+  const shiftLines = size / 2 - lineThickness;
 
   return (
     <div
       style={{
-        width: `${props.size}px`,
-        height: `${props.size}px`,
+        width: `${size}px`,
+        height: `${size}px`,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
