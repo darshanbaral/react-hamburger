@@ -11,7 +11,9 @@ function App() {
       <h2>
         By <a href="https://www.darshanbaral.com/">Darshan</a>.
       </h2>
-      <h3>Fork here.</h3>
+      <h3>
+        Fork <a href="https://github.com/darshanbaral/react-hamburger">here</a>.
+      </h3>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Hamburger size={50} colors={["black", "red"]} delay="0.5s" />
       </div>
