@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 
 function Hamburger(props) {
-  const [cross, setCross] = useState(false);
+  const [isHamburger, setIsHamburger] = useState(true);
 
   const handleClick = () => {
-    setCross(!cross);
+    if (props.alsoRun) {
+      props.alsoRun(!isHamburger);
+    }
+    setIsHamburger(!isHamburger);
   };
 
-  const lt = props.size / 12;
-  const shift = props.size / 2 - lt;
+  const lineThickness = props.size / 12;
+  const shiftLines = props.size / 2 - lineThickness;
 
   return (
     <div
@@ -27,43 +30,43 @@ function Hamburger(props) {
       <hr
         style={{
           margin: "0",
-          border: `solid ${lt}px`,
+          border: `solid ${lineThickness}px`,
           borderRadius: "calc(5px + 5%)",
-          borderColor: cross ? props.colors[1] : props.colors[0],
+          borderColor: isHamburger ? props.colors[0] : props.colors[1],
           padding: "0",
           width: "100%",
-          transform: cross ? `translate(0, ${shift}px) rotate(45deg)` : "none",
+          transform: isHamburger
+            ? "none"
+            : `translate(0, ${shiftLines}px) rotate(45deg)`,
           transformOrigin: "50% 50%",
-          transition: `all ${props.delay}`,
-          color: cross ? "white" : "black"
-        }}
-      />
-      <hr
-        style={{
-          margin: "0",
-          border: `solid ${lt}px`,
-          borderRadius: "calc(5px + 5%)",
-          borderColor: cross ? props.colors[1] : props.colors[0],
-          padding: "0",
-          width: cross ? "0" : "100%",
-          opacity: cross ? "0" : "100%",
           transition: `all ${props.delay}`
         }}
       />
       <hr
         style={{
           margin: "0",
-          border: `solid ${lt}px`,
+          border: `solid ${lineThickness}px`,
           borderRadius: "calc(5px + 5%)",
-          borderColor: cross ? props.colors[1] : props.colors[0],
+          borderColor: isHamburger ? props.colors[0] : props.colors[1],
+          padding: "0",
+          width: isHamburger ? "100%" : "0",
+          opacity: isHamburger ? "100%" : "0",
+          transition: `all ${props.delay}`
+        }}
+      />
+      <hr
+        style={{
+          margin: "0",
+          border: `solid ${lineThickness}px`,
+          borderRadius: "calc(5px + 5%)",
+          borderColor: isHamburger ? props.colors[0] : props.colors[1],
           padding: "0",
           width: "100%",
-          transform: cross
-            ? `translate(0, -${shift}px) rotate(-45deg)`
-            : "none",
+          transform: isHamburger
+            ? "none"
+            : `translate(0, -${shiftLines}px) rotate(-45deg)`,
           transformOrigin: "50% 50%",
-          transition: `all ${props.delay}`,
-          color: cross ? "white" : "black"
+          transition: `all ${props.delay}`
         }}
       />
     </div>
