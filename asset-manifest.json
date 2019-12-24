@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-hamburger/static/css/main.9b1431d8.chunk.css",
+    "main.js": "/react-hamburger/static/js/main.3747d584.chunk.js",
+    "main.js.map": "/react-hamburger/static/js/main.3747d584.chunk.js.map",
+    "runtime-main.js": "/react-hamburger/static/js/runtime-main.1b41d3d4.js",
+    "runtime-main.js.map": "/react-hamburger/static/js/runtime-main.1b41d3d4.js.map",
+    "static/js/2.650337bf.chunk.js": "/react-hamburger/static/js/2.650337bf.chunk.js",
+    "static/js/2.650337bf.chunk.js.map": "/react-hamburger/static/js/2.650337bf.chunk.js.map",
+    "index.html": "/react-hamburger/index.html",
+    "precache-manifest.3716d62f994cd0ada81b114b097a727d.js": "/react-hamburger/precache-manifest.3716d62f994cd0ada81b114b097a727d.js",
+    "service-worker.js": "/react-hamburger/service-worker.js",
+    "static/css/main.9b1431d8.chunk.css.map": "/react-hamburger/static/css/main.9b1431d8.chunk.css.map",
+    "static/js/2.650337bf.chunk.js.LICENSE": "/react-hamburger/static/js/2.650337bf.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b41d3d4.js",
+    "static/js/2.650337bf.chunk.js",
+    "static/css/main.9b1431d8.chunk.css",
+    "static/js/main.3747d584.chunk.js"
+  ]
+}
