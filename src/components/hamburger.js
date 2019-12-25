@@ -37,6 +37,9 @@ class Hamburger extends React.Component {
             margin: "0",
             border: `solid ${lineThickness}px`,
             borderRadius: "calc(5px + 5%)",
+            backgroundColor: this.state.isHamburger
+              ? colors.hamburger
+              : colors.cross,
             borderColor: this.state.isHamburger
               ? colors.hamburger
               : colors.cross,
@@ -54,12 +57,11 @@ class Hamburger extends React.Component {
             margin: "0",
             border: `solid ${lineThickness}px`,
             borderRadius: "calc(5px + 5%)",
-            borderColor: this.state.isHamburger
-              ? colors.hamburger
-              : colors.cross,
+            borderColor: colors.hamburger,
+            backgroundColor: colors.hamburger,
             padding: "0",
             width: this.state.isHamburger ? "100%" : "0",
-            opacity: this.state.isHamburger ? "100%" : "0",
+            opacity: this.state.isHamburger ? "1" : "0",
             transition: `all ${delay}`
           }}
         />
@@ -68,6 +70,9 @@ class Hamburger extends React.Component {
             margin: "0",
             border: `solid ${lineThickness}px`,
             borderRadius: "calc(5px + 5%)",
+            backgroundColor: this.state.isHamburger
+              ? colors.hamburger
+              : colors.cross,
             borderColor: this.state.isHamburger
               ? colors.hamburger
               : colors.cross,
