@@ -92,6 +92,7 @@ function (_React$Component) {
           margin: "0",
           border: "solid ".concat(lineThickness, "px"),
           borderRadius: "calc(5px + 5%)",
+          backgroundColor: this.state.isHamburger ? colors.hamburger : colors.cross,
           borderColor: this.state.isHamburger ? colors.hamburger : colors.cross,
           padding: "0",
           width: "100%",
@@ -104,10 +105,11 @@ function (_React$Component) {
           margin: "0",
           border: "solid ".concat(lineThickness, "px"),
           borderRadius: "calc(5px + 5%)",
-          borderColor: this.state.isHamburger ? colors.hamburger : colors.cross,
+          borderColor: colors.hamburger,
+          backgroundColor: colors.hamburger,
           padding: "0",
           width: this.state.isHamburger ? "100%" : "0",
-          opacity: this.state.isHamburger ? "100%" : "0",
+          opacity: this.state.isHamburger ? "1" : "0",
           transition: "all ".concat(delay)
         }
       }), _react.default.createElement("hr", {
@@ -115,6 +117,7 @@ function (_React$Component) {
           margin: "0",
           border: "solid ".concat(lineThickness, "px"),
           borderRadius: "calc(5px + 5%)",
+          backgroundColor: this.state.isHamburger ? colors.hamburger : colors.cross,
           borderColor: this.state.isHamburger ? colors.hamburger : colors.cross,
           padding: "0",
           width: "100%",
