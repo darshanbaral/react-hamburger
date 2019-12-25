@@ -11,6 +11,7 @@ class Hamburger extends React.Component {
   };
 
   render() {
+    const delay = this.props.delay ? this.props.delay : "0.25s";
     const colors = this.props.colors
       ? this.props.colors
       : { hamburger: "black", cross: "black" };
@@ -45,7 +46,7 @@ class Hamburger extends React.Component {
               ? "none"
               : `translate(0, ${shiftLines}px) rotate(45deg)`,
             transformOrigin: "50% 50%",
-            transition: `all ${this.props.delay}`
+            transition: `all ${delay}`
           }}
         />
         <hr
@@ -59,7 +60,7 @@ class Hamburger extends React.Component {
             padding: "0",
             width: this.state.isHamburger ? "100%" : "0",
             opacity: this.state.isHamburger ? "100%" : "0",
-            transition: `all ${this.props.delay}`
+            transition: `all ${delay}`
           }}
         />
         <hr
@@ -76,7 +77,7 @@ class Hamburger extends React.Component {
               ? "none"
               : `translate(0, -${shiftLines}px) rotate(-45deg)`,
             transformOrigin: "50% 50%",
-            transition: `all ${this.props.delay}`
+            transition: `all ${delay}`
           }}
         />
       </div>
